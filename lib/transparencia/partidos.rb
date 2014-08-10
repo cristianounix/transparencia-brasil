@@ -3,7 +3,10 @@ module Transparencia
     ENTRY_POINT = Settings.transparencia.services.partidos
 
     def self.all
-      partidos = JSON.parse(get(ENTRY_POINT).body)
+      key = ENTRY_POINT
+      partidos = Rails.cache.fetch(key, expires_in: 30.days) { |url|
+        JSON.parse(get(url).body)
+      }
       partidos
     end
 
