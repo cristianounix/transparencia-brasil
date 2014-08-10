@@ -27,6 +27,6 @@ module TransparenciaBrasil
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.autoload_paths += %W(#{config.root}/lib)
-    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 120.minutes }
   end
 end
