@@ -1,0 +1,8 @@
+development:
+  transparencia:
+    host: 'http://api.transparencia.org.br'
+    services:
+      estados: '/api/v1/estados'
+      cargos: '/api/v1/cargos'
+      partidos: '/api/v1/partidos'
+      candidatos: '/api/v1/candidatos'
