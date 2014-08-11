@@ -1,5 +1,5 @@
 module Transparencia
-  class Partidos < Transparencia::Base
+  class Partido < Transparencia::Base
     ENTRY_POINT = Settings.transparencia.services.partidos
 
     def self.all

@@ -6,3 +6,4 @@ development:
       cargos: '/api/v1/cargos'
       partidos: '/api/v1/partidos'
       candidatos: '/api/v1/candidatos'
+      excelencias: '/api/v1/excelencias'
