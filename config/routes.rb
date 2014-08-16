@@ -28,6 +28,9 @@ Rails.application.routes.draw do
 
   resource :estados, only: [:show]
   resource :partidos, only: [:show]
+  resource :cargos, only: [:show]
+  resource :excelencias, only: [:show]
+  resource :candidatos, only: [:show]
 
   # Example resource route with sub-resources:
   #   resources :products do
