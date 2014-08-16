@@ -11,19 +11,18 @@ module Transparencia
     end
 
 
-
     def get(excelencias_id)
-      key = ENTRY_POINT
+      key = ENTRY_POINT + excelencias_id.to_s
       excelencia = Rails.cache.fetch(key, expires_in: 30.days) { |url|
-        JSON.parse(get(url+"/#{excelencias_id}").body)
+        JSON.parse(self.class.get(url).body)
       }
       excelencia
     end
 
-    def bens
-      key = ENTRY_POINT
+    def bens(excelencias_id)
+      key = ENTRY_POINT + "/#{excelencias_id}/bens"
       bns = Rails.cache.fetch(key, expires_in: 30.days) { |url|
-        JSON.parse(get(url+"/#{excelencias_id}/bens").body)
+        JSON.parse(self.class.get(url).body)
       }
       bns
     end
