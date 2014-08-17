@@ -37,6 +37,9 @@ $divisor-color: lighten( #000000, 73% );
         position: absolute;
         right: 9px;
         top: -4px;
+        &:hover {
+            color: $action-color;
+        }
     }
 
     img.divisor {
@@ -55,21 +58,26 @@ $divisor-color: lighten( #000000, 73% );
         left: 0px;
         max-height: 200px;
         overflow: auto;
+        z-index: 1;
 
         ul {
             padding: 0;
             list-style: none;
             li {
-                font-size: 1.4286em; /* 20px */
-                color: $divisor-color;
                 border-bottom: 1px dashed $divisor-color;
                 padding: 10px 0;
                 &:hover {
                     border-bottom: 1px dashed $action-color;
-                    color: $action-color;
+                    span {
+                        color: $action-color;
+                    }
                 }
                 &:first-child {
                     padding: 0 0 10px 0;
+                }
+                span {
+                    font-size: 1.4286em; /* 20px */
+                    color: $divisor-color;
                 }
             }
         }

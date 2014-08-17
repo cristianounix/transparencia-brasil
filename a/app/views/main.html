@@ -28,44 +28,8 @@
 
           <div class="box-trans-hidden-select">
             <ul>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
-              </li>
-              <li>
-                Campinas - SP
+              <li data-ng-repeat="state in states">
+                <span data-ng-bind="state.name"></span> - <span data-ng-bind="state.acronym"></span>
               </li>
             </ul>
           </div>

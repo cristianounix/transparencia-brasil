@@ -30,7 +30,7 @@
 
             <div class="box-trans-search">
               <i class="ion-ios7-search-strong"></i>
-              <input type="text" name="" value="Localizar candidato..." />
+              <input type="text" name="" id="searchHeader" value="Localizar candidato..." />
             </div>
 
           </div>
@@ -42,7 +42,7 @@
                 <img src="images/transparecia-brasil-divisor-header.png" height="25" width="2">
               </li>
               <li>
-                <a href="#" title="Constribuir" target="_blank"><i class="ion-fork-repo"></i></a>
+                <a href="#" title="Contribuir" target="_blank"><i class="ion-fork-repo"></i></a>
               </li>
               <li>
                 <a href="#" title="Ajuda" target="_blank"><i class="ion-help"></i></a>
@@ -127,10 +127,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/animation/animation.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/statesconstant.js"></script>
+    <script src="scripts/services/states.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
