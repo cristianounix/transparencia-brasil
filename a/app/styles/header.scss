@@ -1,0 +1,62 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+
+$primary-color: #16B83E;
+$secondary-color: #FDE01F;
+$action-color: #1352B9;
+$text-color: lighten( #000000, 13% );
+$divisor-color: lighten( #000000, 73% );
+
+/*-----  End of Colors of application  ------*/
+
+/*=============================================
+=            Header of application            =
+=============================================*/
+
+.trans-header {
+  width: 100%;
+  height: 52px;
+  background: $primary-color;
+  color: #ffffff;
+  border-bottom: 8px solid $secondary-color;
+
+  .box-trans-search {
+    padding-left: 10px;
+    i{
+      font-size: 1.7143em; /* 24px */
+      float: left;
+      margin-top: 5px;
+    }
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 10px 0;
+      margin-left: 10px;
+    }
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 10px 10px 0 0;
+    li {
+      float: left;
+      margin-right: 9px;
+      a {
+        color: #ffffff;
+        padding-top: 2px;
+        float: left;
+        margin-right: 7px;
+      }
+      i {
+        padding-top: 2px;
+        float: left;
+      }
+    }
+  }
+}
+
+/*-----  End of Header of application  ------*/

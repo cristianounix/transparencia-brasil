@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name aApp
+ * @name transparenciaBrasilApp
  * @description
- * # aApp
+ * # transparenciaBrasilApp
  *
  * Main module of the application.
  */
 angular
-  .module('aApp', [
+  .module('transparenciaBrasilApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
