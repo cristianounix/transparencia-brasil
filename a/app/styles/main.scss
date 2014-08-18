@@ -24,6 +24,7 @@ $divisor-color: lighten( #000000, 73% );
 
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
   background: url(../images/background-transparencia-brasil.jpg) repeat;
 }
 
@@ -45,6 +46,10 @@ body {
 
 .description-app {
     text-align: center;
+}
+
+.default-sections-hidden {
+    display: none;
 }
 
 /*-----  End of Description off app  ------*/
@@ -72,3 +77,4 @@ footer {
 @import "header.scss";
 @import "home.scss";
 @import "default-box-select.scss";
+@import "person-type.scss";

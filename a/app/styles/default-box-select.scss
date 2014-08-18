@@ -19,7 +19,7 @@ $divisor-color: lighten( #000000, 73% );
     border-radius: 3px;
     border: 1px solid $divisor-color;
     background: #ffffff;
-    padding: 13px 8px;
+    padding: 13px 8px 21px 8px;
     position: relative;
     cursor: pointer;
 
@@ -28,8 +28,18 @@ $divisor-color: lighten( #000000, 73% );
         color: $text-color;
     }
 
+    span.span-select {
+        width: 88%;
+        float: left;
+    }
+
     i {
         color: $divisor-color;
+    }
+
+    i.select-down {
+        position: relative;
+        top: 5px;
     }
 
     i.ion-arrow-right-c {
