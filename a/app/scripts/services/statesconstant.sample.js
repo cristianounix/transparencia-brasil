@@ -9,5 +9,5 @@
  */
 angular.module('transparenciaBrasilApp')
   .constant('statesConstant', {
-    'getStatesUrl': '../json/states.json'
+    //'getStatesUrl': '../json/states.json'
   });

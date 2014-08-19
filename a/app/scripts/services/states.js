@@ -12,9 +12,8 @@ angular.module('transparenciaBrasilApp')
 
     var states = {};
 
-    /* Get states */
-    states.get = function(){
-      return $http.get(statesConstant.getStatesUrl).then(function(_result){
+    var getFunction = (function(_url){
+      return $http.get(_url).then(function(_result){
         if(typeof _result.data === 'object'){
           return _result.data;
         }else {
@@ -23,6 +22,11 @@ angular.module('transparenciaBrasilApp')
       }, function(_result){
         return $q.reject(_result.data);
       });
+    })();
+
+    /* Get states */
+    states.get = function(){
+      getFunction(statesConstant.getStatesUrl);
     };
 
     return states;

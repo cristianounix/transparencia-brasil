@@ -9,8 +9,8 @@
  */
 angular.module('transparenciaBrasilApp')
   .constant('personConstant', {
-    'getAllPersonType': '../../json/person_type_1234.json',
-    'getPersonType': function(_idPerson){
-        return '../../json/person_type_'+ _idPerson +'.json';
-    }
+    //'getAllPersonType': '../../json/person_type_1234.json',
+    //'getPersonType': function(_idPerson){
+    //    return '../../json/person_type_'+ _idPerson +'.json';
+    //}
   });

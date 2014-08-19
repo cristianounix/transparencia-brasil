@@ -12,9 +12,8 @@ angular.module('transparenciaBrasilApp')
 
     var personType = {};
 
-    /* Get states */
-    personType.getAll = function(){
-      return $http.get(personConstant.getAllPersonType).then(function(_result){
+    var getFunction = (function(_url){
+      return $http.get(_url).then(function(_result){
         if(typeof _result.data === 'object'){
           return _result.data;
         }else {
@@ -23,19 +22,16 @@ angular.module('transparenciaBrasilApp')
       }, function(_result){
         return $q.reject(_result.data);
       });
+    })();
+
+    /* Get states */
+    personType.getAll = function(){
+      getFunction(personConstant.getAllPersonType);
     };
 
     /* Get states */
     personType.get = function(_idPerson){
-      return $http.get(personConstant.getPersonType(_idPerson)).then(function(_result){
-        if(typeof _result.data === 'object'){
-          return _result.data;
-        }else {
-          return $q.reject(_result.data);
-        }
-      }, function(_result){
-        return $q.reject(_result.data);
-      });
+      getFunction(personConstant.getPersonType(_idPerson));
     };
 
     return personType;
