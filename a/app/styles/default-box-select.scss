@@ -1,0 +1,99 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+
+$primary-color: #16B83E;
+$secondary-color: #FDE01F;
+$action-color: #1352B9;
+$text-color: lighten( #000000, 13% );
+$divisor-color: lighten( #000000, 73% );
+
+/*-----  End of Colors of application  ------*/
+
+/*=============================================
+=            Default box to select            =
+=============================================*/
+
+.box-trans-select {
+    text-align: left;
+    border-radius: 3px;
+    border: 1px solid $divisor-color;
+    background: #ffffff;
+    padding: 13px 8px 21px 8px;
+    position: relative;
+    cursor: pointer;
+
+    span {
+        font-size: 1.4286em; /* 20px */
+        color: $text-color;
+    }
+
+    span.span-select {
+        width: 88%;
+        float: left;
+    }
+
+    i {
+        color: $divisor-color;
+    }
+
+    i.select-down {
+        position: relative;
+        top: 5px;
+    }
+
+    i.ion-arrow-right-c {
+        font-size: 3.3571em; /* 47px */
+        position: absolute;
+        right: 9px;
+        top: -4px;
+        &:hover {
+            color: $action-color;
+        }
+    }
+
+    img.divisor {
+        position: absolute;
+        right: 48px;
+        top: 3px;
+    }
+
+    .box-trans-hidden-select {
+        display: none;
+        @extend .box-trans-select;
+        position: absolute;
+        width: 100%;
+        top: 57px;
+        margin-bottom: 40px;
+        left: 0px;
+        max-height: 200px;
+        overflow: auto;
+        z-index: 1;
+
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                border-bottom: 1px dashed $divisor-color;
+                padding: 10px 0;
+                &:hover {
+                    border-bottom: 1px dashed $action-color;
+                    span {
+                        color: $action-color;
+                    }
+                }
+                &:first-child {
+                    padding: 0 0 10px 0;
+                }
+                span {
+                    font-size: 1.4286em; /* 20px */
+                    color: $divisor-color;
+                }
+            }
+        }
+
+    }
+}
+
+/*-----  End of Default box to select  ------*/
+

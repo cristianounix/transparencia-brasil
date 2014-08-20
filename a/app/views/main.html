@@ -1,0 +1,109 @@
+<!-- Center select of Transparência Brasil -->
+<section class="default-trans-container main-trans">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>
+          Transparência Brasil
+        </h1>
+      </div>
+    </div>
+
+    <div class="row row-box-select">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <p>
+          Localizar candidato por estado
+        </p>
+
+        <div class="box-trans-select">
+          <span class="span-select" data-ng-bind="stateDefaultName"></span>
+          <i class="ion-arrow-down-b select-down"></i>
+          <img src="images/transparecia-brasil-divisor-select.png" class="divisor">
+          <i class="ion-arrow-right-c" title="vamos lá!" data-ng-click="getAllPersonType()"></i>
+
+
+          <div class="box-trans-hidden-select">
+            <ul>
+              <li class="li-select-state" data-ng-repeat="state in states" data-ng-click="configFinalQuery(state.id, state.name, state.acronym); getAllPersonType()">
+                <span data-ng-bind="state.name"></span> - <span data-ng-bind="state.acronym"</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Define person type -->
+<section class="default-trans-container default-sections-hidden person-type">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <img class="icon-search" src="images/search-transparencia-brasil.svg" alt="Selecione o cargo desejado">
+          Selecione o cargo desejado
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="box-trans-select">
+          <span class="span-select" data-ng-bind="firstPersonName"></span>
+          <i class="ion-arrow-down-b select-down"></i>
+          <img src="images/transparecia-brasil-divisor-select.png" class="divisor">
+          <i class="ion-arrow-right-c" title="vamos lá!" data-ng-click="getPersonType(firstPerson)"></i>
+
+
+          <div class="box-trans-hidden-select">
+            <ul>
+              <li class="li-select-person" data-ng-repeat="person in persons" data-ng-click="configFinalQuery(stateId, stateName, stateAcronym, person.id, person.name); getPersonType(person.id)">
+                <span data-ng-bind="person.name"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <hr />
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Define person type -->
+<section class="default-trans-container default-sections-hidden person-profile">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <img class="icon-search" src="images/candidato-transparencia-brasil.svg" alt="Cargo selecionado: {{firstPersonName}}">
+          Cargo selecionado: <span data-ng-bind="firstPersonName"></span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <hr />
+      </div>
+    </div>
+
+  </div>
+
+</section>

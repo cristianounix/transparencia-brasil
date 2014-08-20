@@ -1,0 +1,12 @@
+{
+  "person": [
+    {
+      "id": 1234,
+      "name": "Presidente da República"
+    },
+    {
+      "id": 1234,
+      "name": "Deputado Federal"
+    }
+  ]
+}

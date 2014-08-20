@@ -1,0 +1,39 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+
+$primary-color: #16B83E;
+$secondary-color: #FDE01F;
+$action-color: #1352B9;
+$text-color: lighten( #000000, 13% );
+$divisor-color: lighten( #000000, 73% );
+
+/*-----  End of Colors of application  ------*/
+
+/*===========================================
+=            Main of application            =
+===========================================*/
+
+.main-trans {
+  text-align: center;
+  background: $secondary-color;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid $action-color;
+
+    h1 {
+        color: $action-color;
+        margin-top: 30px;
+    }
+
+    p {
+        color: $primary-color;
+        font-size: 1.2143em; /* 17px */
+    }
+
+    .row-box-select {
+        margin-top: 20px;
+    }
+}
+
+/*-----  End of Main of application  ------*/
