@@ -26,7 +26,7 @@
     });
 
     /* Go next step */
-    jQuery(document).on('click', '.ion-arrow-right-c, .li-select-state', function(){
+    jQuery(document).on('click', '.ion-arrow-right-c, .li-select-state, .li-select-person', function(){
         var promise = jQuery(this).parent().closest('.default-trans-container').next('.default-sections-hidden').fadeIn(100);
         var element = jQuery(this).parent().closest('.default-trans-container').next('.default-sections-hidden');
 

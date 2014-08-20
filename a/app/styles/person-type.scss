@@ -26,3 +26,13 @@ $divisor-color: lighten( #000000, 73% );
 
 /*-----  End of Person type  ------*/
 
+/*=======================================
+=            Card of profile            =
+=======================================*/
+
+.person-profile {
+    @extend .person-type;
+}
+
+/*-----  End of Card of profile  ------*/
+

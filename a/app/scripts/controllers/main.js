@@ -18,10 +18,15 @@ angular.module('transparenciaBrasilApp')
     $scope.stateDefaultName = 'São Paulo - SP';
     $scope.stateQueryId = 1;
 
-    $scope.configFinalQuery = function(_stateId, _newCityName, _stateName, _personName){
-        $scope.stateDefaultName = _newCityName + ' - ' +_stateName;
-        $scope.stateQueryId = _stateId;
-        $scope.personName = _personName;
+    $scope.configFinalQuery = function(_stateId, _stateName, _stateAcronym, _personId, _personName){
+
+       $scope.stateName = _stateName;
+        $scope.stateAcronym = _stateAcronym;
+        $scope.stateDefaultName = _stateName + ' - ' + _stateAcronym;
+        $scope.stateId = _stateId;
+
+        $scope.firstPerson = _personId;
+        $scope.firstPersonName = _personName;
     };
 
     /* Get states */
@@ -35,6 +40,11 @@ angular.module('transparenciaBrasilApp')
     $scope.getAllPersonType = function(){
         personType.getAll().then(function(_result){
             $scope.persons = _result.person;
+
+            /* Default Person id and name */
+            $scope.firstPerson = _result.person[0].id;
+            $scope.firstPersonName = _result.person[0].name;
+
         }, function(_result){
             console.log(_result);
         });

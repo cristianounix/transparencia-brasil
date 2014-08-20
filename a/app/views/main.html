@@ -57,22 +57,44 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div class="box-trans-select">
-          <span class="span-select">
-            Presidente da República
-          </span>
+          <span class="span-select" data-ng-bind="firstPersonName"></span>
           <i class="ion-arrow-down-b select-down"></i>
           <img src="images/transparecia-brasil-divisor-select.png" class="divisor">
-          <i class="ion-arrow-right-c" title="vamos lá!"></i>
+          <i class="ion-arrow-right-c" title="vamos lá!" data-ng-click="getPersonType(firstPerson)"></i>
 
 
           <div class="box-trans-hidden-select">
             <ul>
-              <li data-ng-repeat="person in persons">
+              <li class="li-select-person" data-ng-repeat="person in persons" data-ng-click="configFinalQuery(stateId, stateName, stateAcronym, person.id, person.name); getPersonType(person.id)">
                 <span data-ng-bind="person.name"></span>
               </li>
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <hr />
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Define person type -->
+<section class="default-trans-container default-sections-hidden person-profile">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <img class="icon-search" src="images/candidato-transparencia-brasil.svg" alt="Cargo selecionado: {{firstPersonName}}">
+          Cargo selecionado: <span data-ng-bind="firstPersonName"></span>
+        </h2>
       </div>
     </div>
 
