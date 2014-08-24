@@ -26,12 +26,19 @@
     });
 
     /* Go next step */
+    var iteration = true;
+    var value = 0;
     jQuery(document).on('click', '.ion-arrow-right-c, .li-select-state, .li-select-person', function(){
         var promise = jQuery(this).parent().closest('.default-trans-container').next('.default-sections-hidden').fadeIn(100);
         var element = jQuery(this).parent().closest('.default-trans-container').next('.default-sections-hidden');
 
+        if (iteration) {
+            value = document.body.clientHeight * 2;
+            iteration = false;
+        }
+
         jQuery.when(promise).then(function(){
-            jQuery('body').css({'height': document.body.clientHeight * 2});
+            jQuery('body').css({'height': value});
             jQuery('html, body').animate({
                 scrollTop: parseInt(jQuery(element).offset().top)
             }, 500);

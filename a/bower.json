@@ -13,7 +13,8 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "ionicons": "~1.5.2"
+    "ionicons": "~1.5.2",
+    "jquery.sparkline.min": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
