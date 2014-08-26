@@ -1,0 +1,95 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+/*===================================
+=            Person type            =
+===================================*/
+/* line 16, ../../app/styles/person-type.scss */
+.person-type, .person-profile {
+  text-align: center;
+}
+/* line 18, ../../app/styles/person-type.scss */
+.person-type img.icon-search, .person-profile img.icon-search {
+  width: 42px;
+  height: 42px;
+}
+/* line 22, ../../app/styles/person-type.scss */
+.person-type h2, .person-profile h2 {
+  margin-bottom: 35px;
+}
+
+/*-----  End of Person type  ------*/
+/*=======================================
+=            Card of profile            =
+=======================================*/
+/* line 36, ../../app/styles/person-type.scss */
+.person-profile .profile-box {
+  -webkit-column-count: 23;
+  -webkit-column-gap: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -o-column-count: 3;
+  -o-column-gap: 1em;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+}
+/* line 42, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person {
+  display: inline-block;
+  background: #FEFEFE;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 15px;
+  padding-bottom: 5px;
+  opacity: 1;
+  transition: all .2s ease;
+}
+/* line 63, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person figure img {
+  width: 100%;
+}
+/* line 67, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person h3, .person-profile .profile-box .box-person h4 {
+  color: #212121;
+}
+/* line 70, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person h3, .person-profile .profile-box .box-person h4, .person-profile .profile-box .box-person p, .person-profile .profile-box .box-person h5 {
+  text-align: left;
+  padding: 0 5px;
+}
+/* line 74, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person h3, .person-profile .profile-box .box-person h4 {
+  font-size: 1.1429em;
+  /* 16px */
+  line-height: 1.5625em;
+  /* 25px */
+}
+/* line 78, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person h4, .person-profile .profile-box .box-person h5 {
+  color: #4d4d4d;
+}
+/* line 81, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person p {
+  font-size: 1.0000em;
+  /* 14px */
+  line-height: 1.7857em;
+  /* 25px */
+  margin-top: 1.7857em;
+  margin-bottom: 0.0000em;
+}
+/* line 86, ../../app/styles/person-type.scss */
+.person-profile .profile-box .box-person .jqstooltip {
+  box-sizing: content-box;
+}
+
+/*-----  End of Card of profile  ------*/

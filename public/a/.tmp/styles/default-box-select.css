@@ -1,0 +1,97 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+/*-----  End of Colors of application  ------*/
+/*=============================================
+=            Default box to select            =
+=============================================*/
+/* line 17, ../../app/styles/default-box-select.scss */
+.box-trans-select, .box-trans-select .box-trans-hidden-select {
+  text-align: left;
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  background: #ffffff;
+  padding: 13px 8px 21px 8px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 26, ../../app/styles/default-box-select.scss */
+.box-trans-select span, .box-trans-select .box-trans-hidden-select span {
+  font-size: 1.4286em;
+  /* 20px */
+  color: #212121;
+}
+/* line 31, ../../app/styles/default-box-select.scss */
+.box-trans-select span.span-select {
+  width: 88%;
+  float: left;
+}
+/* line 36, ../../app/styles/default-box-select.scss */
+.box-trans-select i, .box-trans-select .box-trans-hidden-select i {
+  color: #bababa;
+}
+/* line 40, ../../app/styles/default-box-select.scss */
+.box-trans-select i.select-down {
+  position: relative;
+  top: 5px;
+}
+/* line 45, ../../app/styles/default-box-select.scss */
+.box-trans-select i.ion-arrow-right-c {
+  font-size: 3.3571em;
+  /* 47px */
+  position: absolute;
+  right: 9px;
+  top: -4px;
+}
+/* line 50, ../../app/styles/default-box-select.scss */
+.box-trans-select i.ion-arrow-right-c:hover {
+  color: #1352b9;
+}
+/* line 55, ../../app/styles/default-box-select.scss */
+.box-trans-select img.divisor {
+  position: absolute;
+  right: 48px;
+  top: 3px;
+}
+/* line 61, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 57px;
+  margin-bottom: 40px;
+  left: 0px;
+  max-height: 200px;
+  overflow: auto;
+  z-index: 1;
+}
+/* line 73, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select ul {
+  padding: 0;
+  list-style: none;
+}
+/* line 76, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select ul li {
+  border-bottom: 1px dashed #bababa;
+  padding: 10px 0;
+}
+/* line 79, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select ul li:hover {
+  border-bottom: 1px dashed #1352b9;
+}
+/* line 81, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select ul li:hover span {
+  color: #1352b9;
+}
+/* line 85, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select ul li:first-child {
+  padding: 0 0 10px 0;
+}
+/* line 88, ../../app/styles/default-box-select.scss */
+.box-trans-select .box-trans-hidden-select ul li span {
+  font-size: 1.4286em;
+  /* 20px */
+  color: #bababa;
+}
+
+/*-----  End of Default box to select  ------*/

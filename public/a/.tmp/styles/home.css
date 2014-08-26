@@ -1,0 +1,32 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+/*-----  End of Colors of application  ------*/
+/*===========================================
+=            Main of application            =
+===========================================*/
+/* line 17, ../../app/styles/home.scss */
+.main-trans {
+  text-align: center;
+  background: #fde01f;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid #1352b9;
+}
+/* line 24, ../../app/styles/home.scss */
+.main-trans h1 {
+  color: #1352b9;
+  margin-top: 30px;
+}
+/* line 29, ../../app/styles/home.scss */
+.main-trans p {
+  color: #16b83e;
+  font-size: 1.2143em;
+  /* 17px */
+}
+/* line 34, ../../app/styles/home.scss */
+.main-trans .row-box-select {
+  margin-top: 20px;
+}
+
+/*-----  End of Main of application  ------*/

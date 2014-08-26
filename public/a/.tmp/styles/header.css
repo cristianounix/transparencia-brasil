@@ -1,0 +1,59 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+/*-----  End of Colors of application  ------*/
+/*=============================================
+=            Header of application            =
+=============================================*/
+/* line 17, ../../app/styles/header.scss */
+.trans-header {
+  width: 100%;
+  height: 47px;
+  background: #16b83e;
+  color: #ffffff;
+}
+/* line 23, ../../app/styles/header.scss */
+.trans-header .box-trans-search {
+  padding-left: 10px;
+}
+/* line 25, ../../app/styles/header.scss */
+.trans-header .box-trans-search i {
+  font-size: 1.7143em;
+  /* 24px */
+  float: left;
+  margin-top: 5px;
+}
+/* line 30, ../../app/styles/header.scss */
+.trans-header .box-trans-search input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+/* line 39, ../../app/styles/header.scss */
+.trans-header ul {
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 10px 10px 0 0;
+}
+/* line 44, ../../app/styles/header.scss */
+.trans-header ul li {
+  float: left;
+  margin-right: 9px;
+}
+/* line 47, ../../app/styles/header.scss */
+.trans-header ul li a {
+  color: #ffffff;
+  padding-top: 2px;
+  float: left;
+  margin-right: 7px;
+}
+/* line 53, ../../app/styles/header.scss */
+.trans-header ul li i {
+  padding-top: 2px;
+  float: left;
+}
+
+/*-----  End of Header of application  ------*/
