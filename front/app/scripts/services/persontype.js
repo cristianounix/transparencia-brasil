@@ -25,12 +25,12 @@ angular.module('transparenciaBrasilApp')
       });
     };
 
-    /* Get states */
+    /* Get all person */
     personType.getAll = function(){
       return getFunc(personConstant.getAllPersonType);
     };
 
-    /* Get states */
+    /* Get person */
     personType.get = function(_idPerson){
       return getFunc(personConstant.getPersonType(_idPerson));
     };

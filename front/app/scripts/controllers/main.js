@@ -54,7 +54,7 @@ angular.module('transparenciaBrasilApp')
     $scope.getPersonType = function(_idPerson){
 
         personType.get(_idPerson).then(function(_result){
-            console.log(_result);
+            $scope.personList = _result.person;
         }, function(_result){
             console.log(_result);
         });
