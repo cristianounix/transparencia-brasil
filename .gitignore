@@ -3,6 +3,7 @@
 /log
 /tmp
 /public/system
+public/dist/*
 /coverage/
 /spec/tmp
 **.orig
