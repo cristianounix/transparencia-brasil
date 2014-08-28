@@ -46,6 +46,21 @@ body {
 
 .description-app {
     text-align: center;
+    img {
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 2px #999;
+      margin-top: 30px;
+    }
+    h5 {
+      font-size: 1.2857em; /* 18px */
+      margin-top: 15px;
+    }
+    i {
+      font-size: 1.8571em; /* 26px */
+      color: $primary-color;
+      padding-bottom: 30px;
+    }
 }
 
 .default-sections-hidden {

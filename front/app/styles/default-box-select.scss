@@ -24,7 +24,9 @@ $divisor-color: lighten( #000000, 73% );
     cursor: pointer;
 
     span {
-        font-size: 1.4286em; /* 20px */
+        font-size: 0.9286em; /* 13px */
+        position: relative;
+        top: 4px;
         color: $text-color;
     }
 
@@ -86,8 +88,9 @@ $divisor-color: lighten( #000000, 73% );
                     padding: 0 0 10px 0;
                 }
                 span {
-                    font-size: 1.4286em; /* 20px */
+                    font-size: 0.9286em; /* 13px */
                     color: $divisor-color;
+                    top: 0;
                 }
             }
         }
