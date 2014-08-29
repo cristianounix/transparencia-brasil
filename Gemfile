@@ -9,9 +9,10 @@ gem 'jbuilder'
 
 
 group :development do
+  gem 'capistrano'
   gem 'capistrano-npm'
   gem 'capistrano-bower'
-  gem 'capistrano'
+  gem 'capistrano-grunt'
   gem 'capistrano-rails'
   gem 'pry'
   gem 'debugger'
