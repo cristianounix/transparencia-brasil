@@ -6,7 +6,8 @@ gem 'redis-rails'
 gem 'settingslogic'
 gem 'httparty'
 gem 'jbuilder'
-
+gem 'compass'
+gem 'sass'
 
 group :development do
   gem 'capistrano'
