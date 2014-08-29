@@ -12,7 +12,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-npm'
   gem 'capistrano-bower'
-  gem 'capistrano-grunt'
+  gem 'capistrano-grunt', github: 'roots/capistrano-grunt'
   gem 'capistrano-rails'
   gem 'pry'
   gem 'debugger'
