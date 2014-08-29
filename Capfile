@@ -20,6 +20,7 @@ require 'capistrano/deploy'
 require 'capistrano/bower'
 require 'capistrano/npm'
 require 'capistrano/bundler'
+# require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 

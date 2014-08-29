@@ -7,6 +7,9 @@
 role :app, %w{deployer@odin}
 role :web, %w{deployer@odin}
 #role :db,  %w{deploy@example.com}
+role :app, %w{deploy@example.com}
+role :web, %w{deploy@example.com}
+role :db,  %w{deploy@example.com}
 
 
 # Extended Server Syntax
@@ -16,6 +19,7 @@ role :web, %w{deployer@odin}
 # used to set extended properties on the server.
 
 server '128.199.161.244', user: 'deployer', roles: %w{web app}
+server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
 
 
 # Custom SSH Options

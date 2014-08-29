@@ -3,12 +3,15 @@ lock '3.2.1'
 
 set :application, 'DeCaraLimpa'
 set :repo_url, 'git@github.com:cristianounix/transparencia-brasil.git'
+set :application, 'my_app_name'
+set :repo_url, 'git@example.com:me/my_repo.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '~/decaralimpa'
+# set :deploy_to, '/var/www/my_app'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -41,6 +44,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       #execute :touch, release_path.join('tmp/restart.txt')
+      # execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
