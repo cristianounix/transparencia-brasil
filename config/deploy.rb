@@ -1,6 +1,11 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
+<<<<<<< HEAD
+=======
+set :application, 'DeCaraLimpa'
+set :repo_url, 'git@github.com:cristianounix/transparencia-brasil.git'
+>>>>>>> development
 set :application, 'my_app_name'
 set :repo_url, 'git@example.com:me/my_repo.git'
 
@@ -8,6 +13,10 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
+<<<<<<< HEAD
+=======
+set :deploy_to, '~/decaralimpa'
+>>>>>>> development
 # set :deploy_to, '/var/www/my_app'
 
 # Default value for :scm is :git
@@ -40,6 +49,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
+      #execute :touch, release_path.join('tmp/restart.txt')
       # execute :touch, release_path.join('tmp/restart.txt')
     end
   end

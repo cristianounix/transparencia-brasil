@@ -1,0 +1,114 @@
+/*=============================================
+=            Colors of application            =
+=============================================*/
+
+$primary-color: #16B83E;
+$secondary-color: #FDE01F;
+$action-color: #1352B9;
+$text-color: lighten( #000000, 13% );
+$divisor-color: lighten( #000000, 73% );
+
+
+/*===================================
+=            Person type            =
+===================================*/
+
+.person-type {
+    text-align: center;
+    img.icon-search {
+        width: 42px;
+        height: 42px;
+    }
+    h2 {
+        margin-bottom: 35px;
+    }
+}
+
+/*-----  End of Person type  ------*/
+
+/*=======================================
+=            Card of profile            =
+=======================================*/
+
+.person-profile {
+    @extend .person-type;
+
+    .profile-box {
+
+        -webkit-column-width: 200px;
+        -moz-column-width: 200px;
+        -o-column-width: 200px;
+        -webkit-column-width: 200px;
+        column-width: 200px;
+
+        -webkit-column-gap: 15px;
+        -moz-column-gap: 15px;
+        -o-column-gap: 15px;
+        column-gap: 15px;
+
+        -webkit-column-fill: balance;
+        -moz-column-fill: balance;
+        -o-column-fill: balance;
+        column-fill: balance;
+
+        width: 90%;
+        max-width: 1100px;
+        margin: 50px auto;
+
+        .box-person {
+
+            display: inline-block;
+            background: #FEFEFE;
+            border: 2px solid #FAFAFA;
+            box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+            margin: 0 2px 15px;
+
+            -webkit-column-break-inside:avoid;
+            -moz-column-break-inside:avoid;
+            -o-column-break-inside:avoid;
+            -ms-column-break-inside:avoid;
+            column-break-inside:avoid;
+
+            padding: 15px;
+            padding-bottom: 5px;
+
+            background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+            background: -moz-linear-gradient(45deg, #FFF, #F9F9F9);
+            background: -o-linear-gradient(45deg, #FFF, #F9F9F9);
+            background: linear-gradient(45deg, #FFF, #F9F9F9);
+            opacity: 1;
+
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
+            figure {
+                img {
+                    width: 100%;
+                }
+            }
+            h3, h4 {
+                color: $text-color;
+            }
+            h3, h4, p, h5 {
+                text-align: left;
+                padding: 0 5px
+            }
+            h3, h4 {
+                font-size: 1em; /* 16px */
+                line-height: 1.2625em; /* 25px */
+            }
+            h4, h5 {
+                color: lighten( #000000, 30% );;
+            }
+            p {
+                font-size: 1.0000em; /* 14px */
+                line-height: 1.7857em; /* 25px */
+                margin-top: 1.7857em;  margin-bottom: 0.0000em;
+            }
+        }
+    }
+}
+
+/*-----  End of Card of profile  ------*/
+
