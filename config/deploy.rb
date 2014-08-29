@@ -35,6 +35,32 @@ set :deploy_to, '~/decaralimpa'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+#set :bower_flags, '--quiet --config.interactive=false'
+#set :bower_roles, :web
+set :bower_target_path, "#{release_path}/front"
+
+set :grunt_tasks, 'deploy:production'
+set :grunt_target_path, release_path.join('front/Gruntfile.js')
+
+# it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
+# you can see them in [net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start)
+#set :ssh_options, forward_agent: true, auth_methods: %w(publickey password)
+
+namespace :grunt do
+  desc "grunt"
+  task :production do
+    on roles(:app) do
+      within release_path do
+        with path: './node_modules/.bin:$PATH' do
+          execute :grunt, 'production'
+        end
+      end
+    end
+  end
+end
+
+before 'deploy:updated', 'grunt:build'
+
 namespace :deploy do
 
   desc 'Restart application'
@@ -42,7 +68,6 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       #execute :touch, release_path.join('tmp/restart.txt')
-      # execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
@@ -56,5 +81,4 @@ namespace :deploy do
       # end
     end
   end
-
 end
