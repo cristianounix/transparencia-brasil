@@ -11,6 +11,9 @@ set :repo_url, 'git@github.com:cristianounix/transparencia-brasil.git'
 set :deploy_to, '~/decaralimpa'
 # set :deploy_to, '/var/www/my_app'
 
+set :rbenv_ruby, '2.1.0'
+set :bundle_flags, '--quiet'
+
 # Default value for :scm is :git
 # set :scm, :git
 
@@ -27,7 +30,7 @@ set :deploy_to, '~/decaralimpa'
 # set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+#set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/cache}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -37,29 +40,27 @@ set :deploy_to, '~/decaralimpa'
 
 #set :bower_flags, '--quiet --config.interactive=false'
 #set :bower_roles, :web
-set :bower_target_path, "#{release_path}/front"
+set :bower_target_path, "#{release_path}/front/"
+set :grunt_tasks, 'grunt:build'
 
-set :grunt_tasks, 'deploy:production'
-set :grunt_target_path, release_path.join('front/Gruntfile.js')
+set :grunt_target_path, -> { "#{release_path}/front" }
+set :npm_target_path, -> { "#{release_path}/front" }
 
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
 # you can see them in [net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start)
 #set :ssh_options, forward_agent: true, auth_methods: %w(publickey password)
 
+#before 'deploy:updated', 'grunt:build'
+
 namespace :grunt do
-  desc "grunt"
   task :production do
-    on roles(:app) do
-      within release_path do
-        with path: './node_modules/.bin:$PATH' do
-          execute :grunt, 'production'
-        end
-      end
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :grunt, 'build'
     end
   end
 end
 
-before 'deploy:updated', 'grunt:build'
+#before 'deploy:updated', 'grunt:production'
 
 namespace :deploy do
 
@@ -68,6 +69,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       #execute :touch, release_path.join('tmp/restart.txt')
+      #execute :grunt, 'build'
     end
   end
 
