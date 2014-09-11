@@ -15,4 +15,7 @@ config/secrets.yml
 /vendor
 .ruby-version
 .bundle
-
+front/node_modules/
+front/bower_components/
+front/.sass-cache/
+front/.tmp/
