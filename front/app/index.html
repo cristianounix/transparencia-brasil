@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -19,24 +20,86 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">front</h3>
+    <!-- Image Slide -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <article>
+              <header>
+                <h1>De Cara Limpa</h1>
+              </header>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea incidunt aliquam, pariatur vero tempore, natus nisi placeat. Recusandae quisquam at illo consequatur praesentium fugit maiores impedit similique, nemo ex. Impedit!
+              </p>
+              <span>arrow</span>
+            </article>
+          </div>
+        </div>
       </div>
+    </header>
 
-      <div ng-view=""></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    <!-- Search bar -->
+    <section>
+      <div>
+        <div>
+          <span>Presidente</span> <span>arrow</span>
+        </div>
+        <div>
+          <span>arrow</span>
+          <span>Selecione 2 candidatos para realizar uma comparação.</span>
+        </div>
       </div>
-    </div>
+    </section>
 
+    <!-- List of candidates or location -->
+    <section>
+      <div>
+        <div>
+          <h2>Dilma</h2>
+          <span>icon info</span>
+        </div>
+        <div>
+          <h2>SP</h2>
+          <span>icon action</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Candidate detail -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10">
+            <h2>Dilma</h2>
+          </div>
+          <div class="col-xs-2">
+            <span>icon close</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            Popularidade social: <span>32</span> pontos <span>sparkline</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            Gráfico de barras
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>© Todos os direitos reservados ao <a href="#" title="Brasil">Brasil</a><img src="" alt=""></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
