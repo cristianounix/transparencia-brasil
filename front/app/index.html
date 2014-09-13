@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -21,7 +22,7 @@
     <![endif]-->
 
     <!-- Image Slide -->
-    <header>
+    <header class="header-slide">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -32,7 +33,7 @@
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea incidunt aliquam, pariatur vero tempore, natus nisi placeat. Recusandae quisquam at illo consequatur praesentium fugit maiores impedit similique, nemo ex. Impedit!
               </p>
-              <span>arrow</span>
+              <i class="ion-ios7-arrow-down"></i>
             </article>
           </div>
         </div>
@@ -40,14 +41,21 @@
     </header>
 
     <!-- Search bar -->
-    <section>
+    <section class="search-bar">
       <div>
-        <div>
-          <span>Presidente</span> <span>arrow</span>
+        <div class="select">
+          <span>Presidente</span> <i class="ion-arrow-down-b"></i>
+          <div class="select-box">
+            <ul>
+              <li>Governador</li>
+              <li>Governador</li>
+              <li>Governador</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <span>arrow</span>
-          <span>Selecione 2 candidatos para realizar uma comparação.</span>
+        <div class="info">
+          <i class="ion-ios7-information"></i>
+          <span>Clique em <b>2</b> candidatos para realizar uma comparação.</span>
         </div>
       </div>
     </section>
@@ -143,6 +151,7 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/animation/animation.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
