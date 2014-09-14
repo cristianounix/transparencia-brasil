@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name transparenciaBrasilApp.controller:AboutCtrl
+ * @name frontApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the transparenciaBrasilApp
+ * Controller of the frontApp
  */
-angular.module('transparenciaBrasilApp')
+angular.module('frontApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

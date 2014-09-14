@@ -1,70 +1,23 @@
-<!-- Center select of Transparência Brasil -->
-<section class="default-trans-container main-trans">
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
 
-  <div class="container">
+<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>
-          Transparência Brasil
-        </h1>
-      </div>
-    </div>
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
 
-    <div class="row row-box-select">
-      <div class="col-xs-12 col-sm-3 col-sm-offset-3">
-        <p>
-          Filtrar por estado
-        </p>
-
-        <div class="box-trans-select">
-          <span class="span-select" data-ng-bind="stateName"></span>
-          <i class="ion-arrow-down-b select-down"></i>
-          <img src="images/transparecia-brasil-divisor-select.png" class="divisor">
-          <i class="ion-arrow-right-c" title="vamos lá!" data-ng-click="getAllPersonType()"></i>
-
-
-          <div class="box-trans-hidden-select">
-            <ul>
-              <li class="li-select-state" data-ng-repeat="state in states" data-ng-click="configFinalQuery(state.id, state.name, state.acronym); getAllPersonType()">
-                <span data-ng-bind="state.name"></span> - <span data-ng-bind="state.acronym"</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-xs-12 col-sm-3">
-        <p>
-          Selecionar cargo
-        </p>
-        <div class="box-trans-select">
-          <span class="span-select" data-ng-bind="firstPersonName"></span>
-          <i class="ion-arrow-down-b select-down"></i>
-          <img src="images/transparecia-brasil-divisor-select.png" class="divisor">
-          <i class="ion-arrow-right-c" title="vamos lá!" data-ng-click="getPersonType(firstPerson)"></i>
-
-
-          <div class="box-trans-hidden-select">
-            <ul>
-              <li class="li-select-person" data-ng-repeat="person in persons" data-ng-click="configFinalQuery(stateId, stateName, stateAcronym, person.id, person.name)">
-                <span data-ng-bind="person.name"></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- Define person type -->
-<section class="default-trans-container default-sections-hidden person-profile">
-
-  <div class="container">
-
-  </div>
-
-</section>
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>

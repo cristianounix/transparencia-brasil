@@ -1,4 +1,4 @@
-// Generated on 2014-08-16 using generator-angular 0.9.0-1
+// Generated on 2014-09-11 using generator-angular 0.9.5
 'use strict';
 
 // # Globbing
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: '../public/dist'
+    dist: '../public/'
   };
 
   // Define the configuration for all the tasks
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9922,
+        port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
@@ -164,11 +164,11 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath: new RegExp('^<%= yeoman.app %>/|../')
+        ignorePath:  /\.\.\//
       },
       sass: {
-      src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-      ignorePath: /(\.\.\/){1,2}bower_components\//
+        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        ignorePath: /(\.\.\/){1,2}bower_components\//
       }
     },
 
@@ -352,22 +352,8 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*',
+          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
-        },
-        {
-            expand: true,
-            dot: true,
-            cwd: 'bower_components/ionicons/fonts/',
-            src: ['*'],
-            dest: '<%= yeoman.dist %>/fonts'
-        },
-        {
-            expand: true,
-            dot: true,
-            cwd: 'json/',
-            src: ['*'],
-            dest: '../<%= yeoman.dist %>/json'
         }]
       },
       styles: {
@@ -398,10 +384,6 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
-      },
-      e2e: {
-        configFile: 'test/karma-e2e.conf.js',
-        singleRun: false
       }
     }
   });

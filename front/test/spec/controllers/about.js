@@ -3,7 +3,7 @@
 describe('Controller: AboutCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('transparenciaBrasilApp'));
+  beforeEach(module('frontApp'));
 
   var AboutCtrl,
     scope;

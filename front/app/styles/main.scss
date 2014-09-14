@@ -1,95 +1,100 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-
-/*=============================================
-=            Colors of application            =
-=============================================*/
-
-$primary-color: #16B83E;
-$secondary-color: #FDE01F;
-$action-color: #1352B9;
-$text-color: lighten( #000000, 13% );
-$divisor-color: lighten( #000000, 73% );
-
-/*-----  End of Colors of application  ------*/
-
-
-
-/*============================
-=            Body            =
-============================*/
-
 body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background: url(../images/background-transparencia-brasil.jpg) repeat;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
-/*-----  End of Body  ------*/
-
-/*=============================================================
-=            Default container used in application            =
-=============================================================*/
-
-.default-trans-container {
-
+@-webkit-keyframes arrow{
+  0%{
+    top: 30px;
+  }
+  50%{
+    top: 60px;
+  }
+  100%{
+    top: 30px;
+  }
 }
 
-/*-----  End of Default container used in application  ------*/
+/* Slide */
+.header-slide {
+  background: url(../images/bg-de-cara-limpa.png) no-repeat;
+  background-size: cover;
+  height: 390px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 3px #999999;
 
-/*===========================================
-=            Description off app            =
-===========================================*/
+  h1, i{
+     font-size: 5.0000em; /* 80px */
+     line-height: 1.2500em; /* 100px */
+     text-transform: uppercase;
+  }
 
-.description-app {
-    text-align: center;
-    img {
-      border-radius: 50%;
-      border: 2px solid #ffffff;
-      box-shadow: 0 0 2px #999;
-      margin-top: 30px;
+  h1{
+    margin-top: 60px;
+  }
+
+  i {
+    position: relative;
+    top: 30px;
+    -webkit-animation: arrow 1.5s infinite;
+  }
+
+  p {
+    padding: 0 110px;
+    font-size: 1.0000em; /* 16px */
+    line-height: 1.6250em; /* 26px */
+  }
+}
+
+/* Search bar */
+.search-bar {
+  padding: 38px 10px;
+  height: 98px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px #888888;
+  position: relative;
+  .select {
+    width: 50%;
+    float: left;
+    color: #b3092c;
+    span{
+      cursor: pointer;
     }
-    h5 {
-      font-size: 1.2857em; /* 18px */
-      margin-top: 15px;
-    }
-    i {
-      font-size: 1.8571em; /* 26px */
-      color: $primary-color;
-      padding-bottom: 30px;
-    }
-}
-
-.default-sections-hidden {
-    display: none;
-}
-
-/*-----  End of Description off app  ------*/
-
-
-
-/*=============================================
-=            Footer of application            =
-=============================================*/
-
-footer {
-    height: 4px;
-    background: #1352b9;
+  }
+  .info{
+    color: #838383;
+    width: 50%;
+    float: right;
     text-align: right;
-    position: fixed;
-    bottom: 0;
-    color: #ffffff;
-    width: 100%;
+  }
+
+  .select-box {
+    position: absolute;
+    background: #ffffff;
+    box-shadow: 0 0 3px #888888;
+    max-height: 180px;
+    display: none;
+    width: 170px;
+    overflow-y: auto;
+    padding: 10px;
+    ul {
+      list-style: none;
+      padding: 0;
+      li{
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        border-bottom: 1px solid #ffffff;
+        &:hover {
+          border-bottom: 1px solid #c9c9c9;
+        }
+      }
+    }
+  }
 }
-
-/*-----  End of Footer of application  ------*/
-
-
-
-@import "header.scss";
-@import "home.scss";
-@import "default-box-select.scss";
-@import "person-type.scss";

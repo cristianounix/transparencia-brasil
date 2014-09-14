@@ -1,24 +1,21 @@
 {
-  "name": "transparenciaBrasil",
+  "name": "front",
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.16",
     "json3": "~3.3.1",
     "es5-shim": "~3.1.0",
-    "jquery": "~1.11.1",
-    "bootstrap-sass-official": "~3.1.1",
+    "bootstrap-sass-official": "~3.2.0",
     "angular-resource": "1.2.16",
-    "angular-cookies": "1.2.16",
-    "angular-sanitize": "1.2.16",
     "angular-animate": "1.2.16",
-    "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "ionicons": "~1.5.2",
-    "jquery.sparkline.min": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"
+    "ionicons": "~1.5.2"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
-    "angular-scenario": "1.2.16"
+    "angular-scenario": "1.2.16",
+    "chroma-js": "~0.5.8",
+    "chartjs": "~0.2.0"
   },
   "appPath": "app"
 }

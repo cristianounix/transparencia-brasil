@@ -2,20 +2,17 @@
 
 /**
  * @ngdoc overview
- * @name transparenciaBrasilApp
+ * @name frontApp
  * @description
- * # transparenciaBrasilApp
+ * # frontApp
  *
  * Main module of the application.
  */
 angular
-  .module('transparenciaBrasilApp', [
+  .module('frontApp', [
     'ngAnimate',
-    'ngCookies',
     'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ngRoute'
   ])
   .config(function ($routeProvider) {
     $routeProvider
