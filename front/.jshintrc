@@ -21,6 +21,7 @@
   "globals": {
     "angular": false,
     "jQuery": false,
-    "chroma": false
+    "chroma": false,
+    "highcharts": false
   }
 }

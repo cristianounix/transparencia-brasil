@@ -163,9 +163,36 @@ body {
   }
 }
 
+.candidate-detail {
+  h2, i {
+    color:#FE00FF;
+    font-size: 2em;
+    line-height: auto;
+  }
+
+  i.close-info {
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+  }
+
+  i.info {
+    font-size: 1em;
+  }
+
+  .social-status {
+    color:#FE00FF;
+  }
+}
+
 /* footer */
 footer{
-
+  background: #E9E9E9;
+  padding: 10px 0 0 0;
+  text-align: left;
+  color: #787878;
+  font-size: 0.875em;
+  margin-top: 10px;
 }
 
 /* Medium screens */

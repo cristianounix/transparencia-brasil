@@ -15,7 +15,8 @@
     "angular-mocks": "1.2.16",
     "angular-scenario": "1.2.16",
     "chroma-js": "~0.5.8",
-    "chartjs": "~0.2.0"
+    "highcharts.src": "https://raw.githubusercontent.com/highslide-software/highcharts.com/master/js/highcharts.src.js",
+    "highcharts-more.src": "https://raw.githubusercontent.com/highslide-software/highcharts.com/master/js/highcharts-more.src.js"
   },
   "appPath": "app"
 }

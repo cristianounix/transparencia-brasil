@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="frontApp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="frontApp">
+  <body data-ng-controller="MainCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -115,24 +115,24 @@
     </section>
 
     <!-- Candidate detail -->
-    <section>
+    <section class="candidate-detail">
       <div class="container">
         <div class="row">
           <div class="col-xs-10">
             <h2>Dilma</h2>
           </div>
           <div class="col-xs-2">
-            <span>icon close</span>
+            <i class="ion-close-round close-info"></i>
+          </div>
+        </div>
+        <div class="row social-status">
+          <div class="col-xs-12">
+            Popularidade social: <b>32</b> pontos <i class="ion-ios7-information info"></i>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            Popularidade social: <span>32</span> pontos <span>sparkline</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            Gráfico de barras
+            <div id="candidateChart"></div>
           </div>
         </div>
       </div>
@@ -192,10 +192,11 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="bower_components/chroma-js/chroma.js"></script>
+        <script src="../bower_components/highcharts.src/index.js"></script>
+        <script src="../bower_components/highcharts-more.src/index.js"></script>
         <script src="scripts/animation/animation.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>
 </html>
