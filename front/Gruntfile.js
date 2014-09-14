@@ -360,7 +360,7 @@ module.exports = function (grunt) {
             dot: true,
             cwd: 'bower_components/ionicons/fonts/',
             src: ['*'],
-            dest: '<%= config.dist %>/fonts'
+            dest: '<%= yeoman.dist %>/fonts'
         }]
       },
       styles: {
@@ -426,7 +426,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
+    //'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
