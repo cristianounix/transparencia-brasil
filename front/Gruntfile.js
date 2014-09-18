@@ -354,6 +354,13 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
+        },
+        {
+            expand: true,
+            dot: true,
+            cwd: 'bower_components/ionicons/fonts/',
+            src: ['*'],
+            dest: '<%= yeoman.dist %>/fonts'
         }]
       },
       styles: {
@@ -396,7 +403,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'wiredep',
+      //'wiredep',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -419,7 +426,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
+    //'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
