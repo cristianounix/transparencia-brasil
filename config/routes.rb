@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   resource :estados, only: [:show]
   resource :partidos, only: [:show]
   resource :cargos, only: [:show]
+  resource :presidentes, only: [:show]
   resource :excelencias, only: [:show]
   resource :candidatos, only: [:show]
 
