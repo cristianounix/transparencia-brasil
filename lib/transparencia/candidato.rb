@@ -5,7 +5,6 @@ module Transparencia
     def self.find_all(q='estado=SP&partido=1')
       key = ENTRY_POINT+'?'+q
       candidatos = Rails.cache.fetch(key, expires_in: 30.days) { |url|
-        binding.pry
         JSON.parse(get(url).body)
       }
       candidatos
@@ -14,10 +13,18 @@ module Transparencia
     def get(id)
       key = ENTRY_POINT+'/'+id.to_s
       candidato = Rails.cache.fetch(key, expires_in: 30.days) { |url|
-        binding.pry
         JSON.parse(self.class.get(url).body)
       }
       candidato
+    end
+
+
+    def self.presidentes
+      key = ENTRY_POINT+'?estado=BR&cargo=1'
+      presidente = Rails.cache.fetch(key, expires_in: 30.days) { |url|
+        JSON.parse(get(url).body)
+      }
+      presidente
     end
 
   end
