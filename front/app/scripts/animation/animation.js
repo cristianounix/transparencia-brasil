@@ -2,7 +2,7 @@
 
 (function(){
     jQuery(document).on('click', '.select span, .select i', function(){
-        jQuery('.select-box').slideToggle(50);
+        jQuery('.select-box').slideToggle(10);
     });
 
     var elements = document.getElementsByClassName('block');
