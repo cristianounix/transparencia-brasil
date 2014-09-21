@@ -7,3 +7,5 @@ development:
       partidos: '/api/v1/partidos'
       candidatos: '/api/v1/candidatos'
       excelencias: '/api/v1/excelencias'
+  google:
+    host: 'https://candidatos.withgoogle.com'

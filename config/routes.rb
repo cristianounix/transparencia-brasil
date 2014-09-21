@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   #root 'home#index'
-  root :to => redirect(path: '/dist', status: 302)
+  #root :to => redirect(path: '/dist', status: 302)
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   resource :estados, only: [:show]
   resource :partidos, only: [:show]
   resource :cargos, only: [:show]
+  resource :presidentes, only: [:show]
   resource :excelencias, only: [:show]
   resource :candidatos, only: [:show]
 
