@@ -2,14 +2,13 @@
 
 /**
  * @ngdoc function
- * @name frontApp.controller:MainCtrl
+ * @name frontApp.controller:CandidateCtrl
  * @description
- * # MainCtrl
+ * # CandidateCtrl
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('MainCtrl', function () {
-
+  .controller('CandidateCtrl', function () {
     jQuery('#candidateChart').highcharts({
         chart: {
             type: 'column'
