@@ -10,46 +10,46 @@ body {
 
 @-webkit-keyframes arrow{
   0%{
-    top: 30px;
+    top: 10px;
   }
   50%{
-    top: 60px;
+    top: 35px;
   }
   100%{
-    top: 30px;
+    top: 10px;
   }
 }
 @-moz-keyframes arrow{
   0%{
-    top: 30px;
+    top: 10px;
   }
   50%{
-    top: 60px;
+    top: 35px;
   }
   100%{
-    top: 30px;
+    top: 10px;
   }
 }
 @-o-keyframes arrow{
   0%{
-    top: 30px;
+    top: 10px;
   }
   50%{
-    top: 60px;
+    top: 35px;
   }
   100%{
-    top: 30px;
+    top: 10px;
   }
 }
 @keyframes arrow{
   0%{
-    top: 30px;
+    top: 10px;
   }
   50%{
-    top: 60px;
+    top: 35px;
   }
   100%{
-    top: 30px;
+    top: 10px;
   }
 }
 
@@ -74,7 +74,7 @@ body {
 
   i {
     position: relative;
-    top: 30px;
+    top: 10px;
     -webkit-animation: arrow 1.5s infinite;
     -moz-animation: arrow 1.5s infinite;
     -o-animation: arrow 1.5s infinite;
@@ -83,7 +83,7 @@ body {
 
   p {
     padding: 0 110px;
-    font-size: 1.0000em; /* 16px */
+    font-size: 1.1em; /* 16px */
     line-height: 1.6250em; /* 26px */
   }
 }
@@ -164,6 +164,7 @@ body {
 }
 
 .candidate-detail {
+  display: none;
   h2, i {
     color:#FE00FF;
     font-size: 2em;
