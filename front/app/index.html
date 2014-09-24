@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->MainCtrl
+    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>MainCtrl
+  </head>
   <body data-ng-controller="CandidateCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -61,8 +61,8 @@
     <!-- List of candidates or location -->
     <section>
       <div class="candidates-states">
-        <div class="block">
-          <h2>Dilma Rousseff</h2>
+        <div class="block" data-ng-repeat="president in presidents">
+          <h2 data-ng-bind="president.apelido"></h2>
         </div>
       </div>
     </section>
@@ -150,6 +150,7 @@
         <script src="scripts/animation/animation.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/services/candidateconstant.js"></script>
+        <script src="scripts/services/candidate.js"></script>
         <script src="scripts/controllers/candidate.js"></script>
         <!-- endbuild -->
 </body>

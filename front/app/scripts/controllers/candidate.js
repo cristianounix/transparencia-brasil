@@ -8,7 +8,23 @@
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('CandidateCtrl', function () {
+  .controller('CandidateCtrl', function ($scope, $timeout, candidate) {
+
+    candidate.getAllPresidents().then(function(_result){
+        $scope.presidents = _result;
+        $timeout(function(){
+            var elements = document.getElementsByClassName('block');
+            var colors = chroma.scale('Set1').domain([0,1], elements.length).colors();
+
+
+            for(var i = 0; i < elements.length; i++){
+                elements[i].style.backgroundColor = colors[i];
+            }
+        },100);
+    }, function(_result){
+        console.log(_result);
+    });
+
     jQuery('#candidateChart').highcharts({
         chart: {
             type: 'column'
