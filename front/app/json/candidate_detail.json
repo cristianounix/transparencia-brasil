@@ -1,0 +1,24 @@
+{
+  "chart": {
+    "legends": [
+      "Ganhos",
+      "Eleições ganhas"
+    ],
+    "serie": [
+      {
+        "name": "Exterior",
+        "data": [
+          10,
+          20
+        ]
+      },
+      {
+        "name": "Exterior",
+        "data": [
+          10,
+          20
+        ]
+      }
+    ]
+  }
+}
