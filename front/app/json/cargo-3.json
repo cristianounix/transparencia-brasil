@@ -1,0 +1,172 @@
+{
+  "array": [
+    {
+      "id": "0",
+      "name": "Brasil",
+      "sigla": "BR",
+      "count": null
+    },
+    {
+      "id": "1",
+      "name": "Acre",
+      "sigla": "AC",
+      "count": 4
+    },
+    {
+      "id": "2",
+      "name": "Alagoas",
+      "sigla": "AL",
+      "count": 7
+    },
+    {
+      "id": "3",
+      "name": "Amazonas",
+      "sigla": "AM",
+      "count": 6
+    },
+    {
+      "id": "4",
+      "name": "Amapá",
+      "sigla": "AP",
+      "count": 9
+    },
+    {
+      "id": "5",
+      "name": "Bahia",
+      "sigla": "BA",
+      "count": 5
+    },
+    {
+      "id": "6",
+      "name": "Ceará",
+      "sigla": "CE",
+      "count": 4
+    },
+    {
+      "id": "27",
+      "name": "Distrito Federal",
+      "sigla": "DF",
+      "count": 8
+    },
+    {
+      "id": "7",
+      "name": "Espírito Santo",
+      "sigla": "ES",
+      "count": 5
+    },
+    {
+      "id": "8",
+      "name": "Goiás",
+      "sigla": "GO",
+      "count": 7
+    },
+    {
+      "id": "9",
+      "name": "Maranhão",
+      "sigla": "MA",
+      "count": 6
+    },
+    {
+      "id": "10",
+      "name": "Minas Gerais",
+      "sigla": "MG",
+      "count": 8
+    },
+    {
+      "id": "11",
+      "name": "Mato Grosso do Sul",
+      "sigla": "MS",
+      "count": 6
+    },
+    {
+      "id": "12",
+      "name": "Mato Grosso",
+      "sigla": "MT",
+      "count": 4
+    },
+    {
+      "id": "13",
+      "name": "Pará",
+      "sigla": "PA",
+      "count": 11
+    },
+    {
+      "id": "14",
+      "name": "Paraíba",
+      "sigla": "PB",
+      "count": 6
+    },
+    {
+      "id": "15",
+      "name": "Pernambuco",
+      "sigla": "PE",
+      "count": 5
+    },
+    {
+      "id": "16",
+      "name": "Piauí",
+      "sigla": "PI",
+      "count": 5
+    },
+    {
+      "id": "17",
+      "name": "Paraná",
+      "sigla": "PR",
+      "count": 8
+    },
+    {
+      "id": "18",
+      "name": "Rio de Janeiro",
+      "sigla": "RJ",
+      "count": 8
+    },
+    {
+      "id": "19",
+      "name": "Rio Grande do Norte",
+      "sigla": "RN",
+      "count": 5
+    },
+    {
+      "id": "20",
+      "name": "Rondônia",
+      "sigla": "RO",
+      "count": 4
+    },
+    {
+      "id": "21",
+      "name": "Roraima",
+      "sigla": "RR",
+      "count": 6
+    },
+    {
+      "id": "22",
+      "name": "Rio Grande do Sul",
+      "sigla": "RS",
+      "count": 7
+    },
+    {
+      "id": "23",
+      "name": "Santa Catarina",
+      "sigla": "SC",
+      "count": 7
+    },
+    {
+      "id": "24",
+      "name": "Sergipe",
+      "sigla": "SE",
+      "count": 5
+    },
+    {
+      "id": "25",
+      "name": "São Paulo",
+      "sigla": "SP",
+      "count": 9
+    },
+    {
+      "id": "26",
+      "name": "Tocantins",
+      "sigla": "TO",
+      "count": 5
+    }
+  ]
+}

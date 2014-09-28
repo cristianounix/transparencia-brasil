@@ -10,6 +10,7 @@
 angular.module('frontApp')
   .controller('CandidateCtrl', function ($scope, $timeout, candidate) {
 
+    /* Get all Presidents */
     candidate.getAllPresidents().then(function(_result){
         $scope.presidents = _result;
         $timeout(function(){
@@ -24,6 +25,77 @@ angular.module('frontApp')
     }, function(_result){
         console.log(_result);
     });
+
+    /* Get all Positions */
+    candidate.getAllPositions().then(function(_result){
+        $scope.positions = _result;
+    }, function(_result){
+        console.log(_result);
+    });
+
+    /* Show Presidents */
+    $scope.showPresidents = function(){
+        delete $scope.globalStateSigle;
+        candidate.getAllPresidents().then(function(_result){
+            $scope.positionByState = {};
+            $scope.presidents = _result;
+            $timeout(function(){
+                var elements = document.getElementsByClassName('block');
+                var colors = chroma.scale('Set1').domain([0,1], elements.length).colors();
+
+
+                for(var i = 0; i < elements.length; i++){
+                    elements[i].style.backgroundColor = colors[i];
+                }
+            },100);
+        }, function(_result){
+            console.log(_result);
+        });
+    };
+
+    /* Get position by state */
+    $scope.getPositionByState = function(_positionId){
+        delete $scope.globalStateSigle;
+        $scope.globalJobId = _positionId;
+        candidate.getPositionByState(_positionId).then(function(_result){
+
+            jQuery('.presidentes-block').fadeOut(200);
+            $scope.presidents = {};
+            _result.array.splice(0,1);
+            $scope.positionByState = _result.array;
+
+            $timeout(function(){
+                var elements = document.getElementsByClassName('block');
+                var colors = chroma.scale('Set1').domain([0,1], elements.length).colors();
+
+
+                for(var i = 0; i < elements.length; i++){
+                    elements[i].style.backgroundColor = colors[i];
+                }
+            },100);
+        }, function(_result){
+            console.log(_result);
+        });
+    };
+
+    $scope.getPositionByStateAndJob = function(_stateSigle){
+        $scope.globalStateSigle = _stateSigle;
+        candidate.getPositionByStateAndJob(_stateSigle, $scope.globalJobId).then(function(_result){
+            $scope.positionByState = {};
+            $scope.presidents = _result;
+            $timeout(function(){
+                var elements = document.getElementsByClassName('block');
+                var colors = chroma.scale('Set1').domain([0,1], elements.length).colors();
+
+
+                for(var i = 0; i < elements.length; i++){
+                    elements[i].style.backgroundColor = colors[i];
+                }
+            },100);
+        }, function(_result){
+            console.log(_result);
+        });
+    };
 
     jQuery('#candidateChart').highcharts({
         chart: {
