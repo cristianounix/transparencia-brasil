@@ -10,14 +10,37 @@ module Transparencia
       candidatos
     end
 
-    def get(id)
-      key = ENTRY_POINT+'/'+id.to_s
+    def self.detail(id)
+      key = ENTRY_POINT+'/'+id
       candidato = Rails.cache.fetch(key, expires_in: 30.days) { |url|
-        JSON.parse(self.class.get(url).body)
+        JSON.parse(get(url).body)
       }
       candidato
     end
 
+    def self.graph(id)
+      key = ENTRY_POINT+'/'+id+'/estatisticas'
+      estatisticas = Rails.cache.fetch(key, expires_in: 30.days) { |url|
+        JSON.parse(get(url).body)
+      }
+      estatisticas
+    end
+
+    def self.candidatures(id)
+      key = ENTRY_POINT+'/'+id+'/candidaturas'
+      candidaturas = Rails.cache.fetch(key, expires_in: 30.days) { |url|
+        JSON.parse(get(url).body)
+      }
+      candidaturas
+    end
+
+    def self.riches(id)
+      key = ENTRY_POINT+'/'+id+'/bens'
+      bens = Rails.cache.fetch(key, expires_in: 30.days) { |url|
+        JSON.parse(get(url).body)
+      }
+      bens
+    end
 
     def self.presidentes
       key = ENTRY_POINT+'?estado=BR&cargo=1'
