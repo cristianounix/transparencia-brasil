@@ -11,7 +11,8 @@ gem 'sass'
 
 group :development do
   gem 'capistrano'
-  gem 'capistrano-rbenv'
+  #gem 'capistrano-rbenv'
+  gem 'capistrano-rvm'
   gem 'capistrano-npm'
   gem 'capistrano-bower'
   gem 'capistrano-grunt', github: 'roots/capistrano-grunt'

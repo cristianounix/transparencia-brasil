@@ -49,6 +49,26 @@ angular.module('frontApp')
       return globalGet(candidateConstant.getAllPresidents);
     };
 
+    /* Get schools to new registration */
+    candidateFactory.getAllPositions = function(){
+      return globalGet(candidateConstant.getAllPositions);
+    };
+
+    /* Get position by state */
+    candidateFactory.getPositionByState = function(_positionId){
+      return globalGet(candidateConstant.getPositionByState(_positionId));
+    };
+
+    /* Get position by state and party */
+    candidateFactory.getPositionByStateAndJob = function(_stateSigle, _jobId){
+      return globalGet(candidateConstant.getPositionByStateAndJob(_stateSigle, _jobId));
+    };
+
+    /* Get candidate Detail */
+    candidateFactory.getCandidateDetail = function(_candidateId){
+      return globalGet(candidateConstant.getCandidateDetail(_candidateId));
+    };
+
     return candidateFactory;
 
   });

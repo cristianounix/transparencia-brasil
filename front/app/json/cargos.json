@@ -1,0 +1,14 @@
+[
+  {
+    "cargoId": "3",
+    "nome": "Governador"
+  },
+  {
+    "cargoId": "5",
+    "nome": "Senador"
+  },
+  {
+    "cargoId": "6",
+    "nome": "Deputado Federal"
+  }
+]

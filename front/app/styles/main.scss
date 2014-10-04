@@ -53,27 +53,49 @@ body {
   }
 }
 
+/* Loading */
+.loading {
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25%;
+  color: #D90B0B;
+  span{
+    font-size: 1.5em;
+  }
+  i {
+    font-size: 3em;
+    display: block;
+  }
+}
+
 /* Slide */
 .header-slide {
   background: url(../images/bg-de-cara-limpa.png) no-repeat;
   background-size: cover;
-  height: 390px;
+  min-height: 390px;
   text-align: center;
   color: #ffffff;
   text-shadow: 0 0 3px #999999;
+  padding-bottom: 30px;
 
   h1, i{
-     font-size: 5.0000em; /* 80px */
      line-height: 1.2500em; /* 100px */
-     text-transform: uppercase;
   }
 
   h1{
     margin-top: 60px;
+    font-size: 2.4em;
+    margin-bottom: 45px;
   }
 
   i {
     position: relative;
+    font-size: 3em;
     top: 10px;
     -webkit-animation: arrow 1.5s infinite;
     -moz-animation: arrow 1.5s infinite;
@@ -96,15 +118,22 @@ body {
   box-shadow: 0 1px 3px #888888;
   position: relative;
   .select {
-    width: 50%;
-    float: left;
-    color: #b3092c;
-    span, i{
+    span{
+      margin-right: 10px;
       cursor: pointer;
+      float: left;
+      text-decoration: underline;
+      color: #c3c3c3;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    span.active {
+      color: #b3092c;
     }
   }
   .info{
-    color: #c3c3c3;
+    color: #b3092c;
     width: 50%;
     float: right;
     text-align: right;
@@ -116,7 +145,7 @@ body {
     box-shadow: 0 0 3px #888888;
     max-height: 180px;
     display: none;
-    width: 170px;
+    width: 200px;
     overflow-y: auto;
     padding: 10px;
     z-index: 9999;
@@ -147,7 +176,7 @@ body {
     flex: 1;
     position: relative;
     h2 {
-      font-size: 2em;
+      font-size: 1em;
       line-height: auto;
       padding: 10px;
     }
@@ -159,6 +188,12 @@ body {
     &:hover {
       box-shadow: 0 0 10px #000000;
       z-index: 1;
+    }
+  }
+
+  .list-of-position-by-state-block {
+    h2 {
+      font-size: 1em;
     }
   }
 }
