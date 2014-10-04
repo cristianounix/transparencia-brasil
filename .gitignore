@@ -1,9 +1,9 @@
+*.DS_Store
 *.rbc
 .rspec
 /log
 /tmp
 /public/system
-public/*
 /coverage/
 /spec/tmp
 **.orig
