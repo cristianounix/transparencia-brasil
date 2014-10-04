@@ -57,23 +57,26 @@ body {
 .header-slide {
   background: url(../images/bg-de-cara-limpa.png) no-repeat;
   background-size: cover;
-  height: 390px;
+  min-height: 390px;
   text-align: center;
   color: #ffffff;
   text-shadow: 0 0 3px #999999;
+  padding-bottom: 30px;
 
   h1, i{
-     font-size: 5.0000em; /* 80px */
      line-height: 1.2500em; /* 100px */
      text-transform: uppercase;
   }
 
   h1{
     margin-top: 60px;
+    font-size: 2.4em;
+    margin-bottom: 45px;
   }
 
   i {
     position: relative;
+    font-size: 3em;
     top: 10px;
     -webkit-animation: arrow 1.5s infinite;
     -moz-animation: arrow 1.5s infinite;
