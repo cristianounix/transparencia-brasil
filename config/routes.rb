@@ -32,7 +32,8 @@ Rails.application.routes.draw do
   resource :cargos, only: [:show]
   resource :presidentes, only: [:show]
   resource :excelencias, only: [:show]
-  resource :candidatos, only: [:show]
+  resources :candidatos, only: [:index, :show]
+
 
   # Example resource route with sub-resources:
   #   resources :products do
