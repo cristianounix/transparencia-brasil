@@ -53,6 +53,26 @@ body {
   }
 }
 
+/* Loading */
+.loading {
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25%;
+  color: #D90B0B;
+  span{
+    font-size: 1.5em;
+  }
+  i {
+    font-size: 3em;
+    display: block;
+  }
+}
+
 /* Slide */
 .header-slide {
   background: url(../images/bg-de-cara-limpa.png) no-repeat;
@@ -65,7 +85,6 @@ body {
   h1, i{
      font-size: 5.0000em; /* 80px */
      line-height: 1.2500em; /* 100px */
-     text-transform: uppercase;
   }
 
   h1{
@@ -111,7 +130,7 @@ body {
     }
   }
   .info{
-    color: #c3c3c3;
+    color: #b3092c;
     width: 50%;
     float: right;
     text-align: right;
@@ -154,7 +173,7 @@ body {
     flex: 1;
     position: relative;
     h2 {
-      font-size: 1.2em;
+      font-size: 1em;
       line-height: auto;
       padding: 10px;
     }
@@ -166,6 +185,12 @@ body {
     &:hover {
       box-shadow: 0 0 10px #000000;
       z-index: 1;
+    }
+  }
+
+  .list-of-position-by-state-block {
+    h2 {
+      font-size: 1em;
     }
   }
 }

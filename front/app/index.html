@@ -21,6 +21,12 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <!-- Loading  -->
+    <div class="loading">
+      <i class="ion-loading-c"></i>
+      <span>Vote com consciência!</span>
+    </div>
+
     <!-- Image Slide -->
     <header class="header-slide">
       <div class="container">
@@ -52,7 +58,7 @@
         <div class="info hidden-xs">
           <i data-ng-show="globalStateSigle" class="ion-ios7-information"></i>
           <!-- <span>Clique em <b>2</b> candidatos para realizar uma comparação.</span> -->
-          <span data-ng-show="globalStateSigle">Estado selecionado: </span><span data-ng-bind="globalStateSigle" data-ng-show="globalStateSigle"></span>
+          <span class="active" data-ng-show="globalStateSigle">Estado selecionado: </span><span data-ng-bind="globalStateSigle" data-ng-show="globalStateSigle"></span>
         </div>
       </div>
     </section>
@@ -60,11 +66,11 @@
     <!-- List of candidates or location -->
     <section>
       <div class="candidates-states">
-        <div class="block presidentes-block" data-ng-repeat="president in presidents">
-          <h2 data-ng-bind="president.apelido"></h2>
+        <div class="block presidentes-block" data-ng-repeat="president in presidents" data-ng-click="candidateDetail(president.id, president.apelido)">
+          <h2><i class="ion-person"></i> - <span data-ng-bind="president.apelido"></span></h2>
         </div>
         <div class="block list-of-position-by-state-block" data-ng-repeat="position in positionByState" data-ng-click="getPositionByStateAndJob(position.sigla)">
-          <h2><span data-ng-bind="position.sigla"></span> - <span data-ng-bind="position.count"></span></h2>
+          <h2><i class="ion-ios7-location"></i> <span data-ng-bind="position.name"></span> - <span data-ng-bind="position.count"></span></h2>
         </div>
       </div>
     </section>
@@ -74,16 +80,16 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-10">
-            <h2>Dilma</h2>
+            <h2 data-ng-bind="nameDetail"></h2>
           </div>
           <div class="col-xs-2">
             <i class="ion-close-round close-info"></i>
           </div>
         </div>
         <div class="row social-status">
-          <div class="col-xs-12">
+          <!-- <div class="col-xs-12">
             Popularidade social: <b>32</b> pontos <i class="ion-ios7-information info"></i>
-          </div>
+          </div> -->
         </div>
         <div class="row">
           <div class="col-xs-12">
@@ -127,9 +133,6 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/chroma-js/chroma.js"></script>
-    <script src="bower_components/highcharts.src/index.js"></script>
-    <script src="bower_components/highcharts-more.src/index.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
@@ -145,6 +148,11 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-scenario/angular-scenario.js"></script>
+    <script src="bower_components/chroma-js/chroma.js"></script>
+    <script src="bower_components/highcharts.src/index.js"></script>
+    <script src="bower_components/highcharts-more.src/index.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

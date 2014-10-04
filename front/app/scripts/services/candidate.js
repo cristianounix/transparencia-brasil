@@ -64,6 +64,11 @@ angular.module('frontApp')
       return globalGet(candidateConstant.getPositionByStateAndJob(_stateSigle, _jobId));
     };
 
+    /* Get candidate Detail */
+    candidateFactory.getCandidateDetail = function(_candidateId){
+      return globalGet(candidateConstant.getCandidateDetail(_candidateId));
+    };
+
     return candidateFactory;
 
   });

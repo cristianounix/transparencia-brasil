@@ -9,9 +9,7 @@
     "angular-resource": "1.2.16",
     "angular-animate": "1.2.16",
     "angular-route": "1.2.16",
-    "ionicons": "~1.5.2"
-  },
-  "devDependencies": {
+    "ionicons": "~1.5.2",
     "angular-mocks": "1.2.16",
     "angular-scenario": "1.2.16",
     "chroma-js": "~0.5.8",
