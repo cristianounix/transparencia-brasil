@@ -24,5 +24,10 @@ angular.module('frontApp')
   /* Get position by state and party */
   'getPositionByStateAndJob': function (_stateSigle, _jobId){
     return '/candidatos.json?estado=BA&cargo=1';
+  },
+
+  'getCandidateDetail': function(_candidateId){
+    return '/candidatos/'+_candidateId+'.json';
   }
+
 });

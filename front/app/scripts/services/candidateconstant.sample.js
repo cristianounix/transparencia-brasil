@@ -31,4 +31,6 @@ angular.module('frontApp')
     //   console.log(_candidateId);
     //   return '../../json/candidate_detail.json';
     // }
+
+
   });
