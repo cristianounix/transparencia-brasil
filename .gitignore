@@ -13,7 +13,6 @@ config/initializers/secret_token.rb
 config/secrets.yml
 /.bundle
 /vendor
-.ruby-version
 .bundle
 front/node_modules/
 front/bower_components/
