@@ -24,5 +24,13 @@ angular.module('frontApp')
     /* Get position by state and party */
     // 'getPositionByStateAndJob': function (_stateSigle, _jobId){
     //   return '../../json/candidates-'+ _stateSigle +'-'+_jobId+'.json';
+    // },
+
+    /* Get candidate detail */
+    // 'getCandidateDetail': function(_candidateId){
+    //   console.log(_candidateId);
+    //   return '../../json/candidate_detail.json';
     // }
+
+
   });

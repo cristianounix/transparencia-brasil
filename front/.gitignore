@@ -3,4 +3,4 @@ dist
 .tmp
 .sass-cache
 bower_components
-app/scripts/services/*constant.js
+public
